@@ -98,6 +98,7 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           context: .
+          file: cluster/images/provider-sql/Dockerfile
           platforms: linux/${{ matrix.arch }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
