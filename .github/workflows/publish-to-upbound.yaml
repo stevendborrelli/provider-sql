@@ -127,6 +127,8 @@ jobs:
     runs-on: ubuntu-24.04
     needs:
       - build
+      - lint
+      - unit-test
     steps:
       - name: Checkout
         uses: actions/checkout@v6
